@@ -1,0 +1,2919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div id="app-header">
+            <h3> GIAO DIỆN BÀI TẬP TUẦN 1 2 3</h3>
+        </div>
+        <div id="app--body">
+            <div id="left">
+                <div id="left--header">
+                    <i class="far fa-id-card"></i>
+                    <h3> Thông tin sinh viên</h3>   
+                    <hr>
+                </div>
+                <div id="left--body">
+                    <h4>Họ tên: <span>Lưu Thị Lương</span></h4>
+                    <h4>MSSV: 20181067</h4>
+                    <h4>Mã lớp/HP: 709155/IT3150</h4>
+                </div>
+            </div>
+
+            <div id="middler">
+                <div class="tips">
+                    <h1>Wellcome</h1>
+                    <h3>Vui lòng chọn các bài trong danh mục để hiển thị code!</h3>
+                </div>
+                <div class="middlerBT">
+                    <div class="middler--header">
+                        <h3> BÀI TẬP </h3>
+                    </div>
+                    <div id="middler--body">
+                        <div class="tuan1 w1-tp1">
+                            <h4> Bài <span id="tenBai">1:</span> <span id="debai">In ra màn hình tất cả các hợp số < 100 </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan1;
+import java.util.*;
+import java.lang.*;
+public class BaiTap1 {
+public static void main(String[] args) {     
+    List<Integer> number = hopto(100);
+    System.out.println("Họ tên: Lưu Thị Lương ");
+    System.out.println("MSSV: 20181067");
+    System.out.println("Lớp: SPKT-CNTT");
+    System.out.println("Kết quả: ");
+    for(int i = 0 ; i <number.size(); i++){
+        System.out.print(number.get(i)+" ");
+    }
+}
+public static boolean nhap(int n){
+    if(n<0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+public static List<Integer> hopto(int n){
+    List<Integer>nt = new ArrayList<>();
+    for(int i =2 ; i <n;i++){
+        boolean KT= false;
+        for(int j = 2; j<i ; j++){
+            if(i%j ==0){
+                KT = true;
+                break;
+            }
+        }
+        if(KT){
+            nt.add(i);
+        }
+    }
+    return nt;
+}
+}
+                                </textarea>
+                            </div>    
+                        </div>   
+                        <div class="tuan1 w1-tp2">
+                            <h4> Bài <span id="tenBai">2:</span> <span id="debai">In ra màn hình 20 số nguyên tố đầu tiên</span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan1;
+import java.util.*;
+import java.lang.*;
+public class BaiTap2 {
+
+	public static void main(String[] args) {
+        List<Integer> number = songuyento(20);
+        System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Kết quả: ");
+        for(int i = 0 ; i < number.size(); i++){
+            System.out.print(number.get(i)+" ");
+        }
+    }
+    public static boolean nhap(int n){
+        if(n<0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public static List<Integer> songuyento(int n){
+        List<Integer>nt = new ArrayList<>();
+        for(int i =2 ; i <n;i++){
+            boolean KT= true;
+            for(int j = 2; j <i ; j++){
+                if(i%j ==0){
+                    KT = false;
+                    break;
+                }
+            }
+            if(KT){
+                nt.add(i);
+            }
+        }
+        return nt;
+    }
+
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan1 w1-tp3">
+                            <h4> Bài <span id="tenBai">3:</span> <span id="debai">In ra màn hình tất cả các số nguyên tố từ 1000 đến 2000</span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan1;
+import java.util.*;
+import java.lang.*;
+public class BaiTap3 {
+
+	 public static void main(String[] args) {
+	        List<Integer> nguyento = songuyento(2000);
+	        System.out.println("Họ tên: Lưu Thị Lương ");
+	        System.out.println("MSSV: 20181067");
+	        System.out.println("Lớp: SPKT-CNTT");
+	        System.out.println("Kết quả: ");
+	        for(int i = 0 ; i < nguyento.size(); i++){
+	            System.out.print(nguyento.get(i)+" ");
+	        }
+	    }
+	    public static boolean nhap(int n){
+	        if(n<0){
+	            return true;
+	        }
+	        else{
+	            return false;
+	        }
+	    }
+	    public static List<Integer> songuyento(int n){
+	        List<Integer>nt = new ArrayList<>();
+	        for(int i =1001 ; i <n;i++){
+	            boolean KT= true;
+	            for(int j = 2; j <i ; j++){
+	                if(i%j ==0){
+	                    KT = false;
+	                    break;
+	                }
+	            }
+	            if(KT){
+	                nt.add(i);
+	            }
+	        }
+	        return nt;
+	    }
+	}
+
+
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan1 w1-tp4">
+                            <h4> Bài <span id="tenBai">4:</span> <span id="debai">In ra màn hình các số <100 và chia hết cho 3,7</span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan1;
+import java.util.*;
+import java.lang.*;
+public class BaiTap4 {
+    public static void main(String[] args) {
+        System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Kết quả: ");
+        for(int i = 0 ; i < 100 ; i ++){
+            if(i%3==0 && i%7==0){
+                System.out.println(i);
+            }
+        }
+        
+    }
+}
+                                        
+
+
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan1 w1-tp5">
+                            <h4> Bài <span id="tenBai">5:</span> <span id="debai">In ra màn hình các số nằm giữa 1000 và 2000 đồng thời chia hết cho 3,5,7</span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan1;
+import java.util.*;
+import java.lang.*;
+public class BaiTap5 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Kết quả: ");
+        for(int i = 1001 ; i< 2000 ; i ++){
+            if(i%3==0 && i%7==0 && i%5==0){
+                System.out.println(i);
+            }
+        }
+    }
+}
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan1 w1-tp6">
+                            <h4> Bài <span id="tenBai">6:</span> <span id="debai">In ra màn hình 5 số hoàn hảo đầu tiên (Số hoàn hảo là số có tổng bằng các ước số của mình kể cả 1</span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan1;
+import java.util.*;
+import java.lang.*;
+public class BaiTap6 {
+
+    public static void main(String[] args) {
+        System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Kết quả: ");
+        for(int i = 1 ; i < 10000; i++) {
+            int sum = 0;
+            for(int j = 1 ; j <= i/2;j++){
+                if(i%j==0){
+                    sum+=j;
+                }
+            }
+            if(i==1){
+                System.out.println( i);
+            }
+            else if(sum == i){
+                System.out.println(i);
+            }
+        }
+    }
+}
+
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan1 w1-tp7">
+                            <h4> Bài <span id="tenBai">7:</span> <span id="debai">Trong các số tự nhiên <=100 hãy đếm xem có bao nhiêu số
+                            </span></h4>
+                            <ul>
+                                <li>a. Chia hết cho 5</li>
+                                <li>a. Chia hết cho 5 dư 1</li>
+                                <li>a. Chia hết cho 5 dư 2</li>
+                                <li>a. Chia hết cho 5 dư 3</li>
+                            </ul>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan1;
+import java.util.*;
+import java.lang.*;
+public class BaiTap7 {
+
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Kết quả: ");
+        int count0=0;
+        int count1=0;
+        int count2=0;
+        int count3=0;
+        for(int i=0;i<100;i++){
+            if(i%5==0){
+            	count0= count0 + 1;
+                
+            }
+        }
+        System.out.println("Số các số tự nhiên chia hết cho 5 là:"+count0);
+        for(int i=0;i<100;i++){
+            if(i%5==1){
+                count1=count1+1;
+            }
+        }
+        System.out.println("Số tự nhiên chia 5 dư 1: "+count1);
+        for(int i=0;i<100;i++){
+            if(i%5==2){
+                count2=count2+1;
+            }
+        }
+        System.out.println("Số tự nhiên chia 5 dư 2: "+count2);
+        for(int i=0;i<100;i++){
+            if(i%5==3){
+                count3=count3+1;
+            }
+        }
+        System.out.println("Số tự nhiên chia 5 dư 3: "+count3);
+    }
+}
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan1 w1-tp8">
+                            <h4> Bài <span id="tenBai">8:</span> <span id="debai">Cho số tự nhiên N bất kỳ (đã gán trước đó), tìm và in ra ước số nguyên tố nhỏ nhất của N.
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan1;
+import java.util.*;
+import java.lang.*;
+public class BaiTap8 {
+	public static int nhap() {
+        Scanner input = new Scanner(System.in);
+        boolean check = false;
+        int n = 0;
+        while (!check) {
+            System.out.print(" ");
+            try {
+                n = input.nextInt();
+                check = true;
+            } catch (Exception e) {
+                System.out.println("Ban phai nhap so!Hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+
+    public static boolean checkSNT(int n) {
+        if (n > 1) {
+            for (int i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void inSNTNhoNhat(int n) {
+        int count = 0;
+        System.out.print("\nUoc nguyen to nho nhat cua " + n + " la: ");
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0 && (checkSNT(i))) {
+                System.out.println(i);
+                count++;
+            }
+            if (count == 1) {
+                return;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+    	System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Kết quả: ");
+        System.out.print("Nhap n =");
+        int n = nhap();
+        inSNTNhoNhat(n);
+    }
+}
+
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan1 w1-tp9">
+                            <h4> Bài <span id="tenBai">9:</span> <span id="debai">Cho số tự nhiên N>1 bất kỳ (đã gán trước đó). In ra khai triển thành tích các số nguyên tố tính từ nhỏ đến lớn VD: 9🡪3.3; 12🡪2.2.3
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan1;
+import java.util.*;
+import java.lang.*;
+public class BaiTap9 {
+
+	public static void main(String[] args) throws Exception {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT"); 
+        System.out.println("Kết quả: ");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập N=");
+        int n = scanner.nextInt();
+        while (nhap(n)){
+            System.out.println("Nhập sai vui lòng nhập lại");
+            System.out.println("Nhập N=");
+            n = scanner.nextInt();
+        }
+
+        List<Integer> nguyento = songuyento(n);
+        List<Integer>trienkhai = new ArrayList<>();
+        int count=0;
+        int length = n;
+        boolean ab = true;
+        do{
+            if(n==1){
+                ab=false;
+            }
+            if(n% nguyento.get(count)==0){
+                n = n/nguyento.get(count);
+                trienkhai.add(nguyento.get(count));
+            }
+            else{
+                count++;
+            }
+
+        }while(ab);
+        System.out.print(length+" = ");
+        for(int i = 0 ; i < trienkhai.size();i++){
+            System.out.print(trienkhai.get(i) + ".");
+        }
+
+    }
+    public static boolean nhap(int n){
+        if(n<4){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public static List<Integer> songuyento(int n){
+        List<Integer>nt = new ArrayList<>();
+        for(int i =2 ; i <n;i++){
+            boolean KT= true;
+            for(int j = 2; j <i ; j++){
+                if(i%j ==0){
+                    KT = false;
+                    break;
+                }
+            }
+            if(KT){
+                nt.add(i);
+            }
+        }
+        return nt;
+    }
+}
+
+                                </textarea>
+                            </div>    
+                        </div>  
+                        <div class="tuan1 w1-tp10">
+                            <h4> Bài <span id="tenBai">10:</span> <span id="debai">Cho trước số tự nhiên N bất kỳ (đã gán trước đó). In ra màn hình tất cả các ước số nguyên tố khác nhau của N.
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan1;
+import java.util.*;
+import java.lang.*;
+public class BaiTap10 {
+	public static void main(String[] args) {
+	    	System.out.println("Họ tên: Lưu Thị Lương ");
+	        System.out.println("MSSV: 20181067");
+	        System.out.println("Lớp: SPKT-CNTT");
+	        System.out.println("Kết quả: ");
+	        System.out.print("Nhap N =");
+	        int n = nhap();
+	        lietKeUocSNT(n);
+	    }
+	public static int nhap() {
+        Scanner input = new Scanner(System.in);
+        boolean check = false;
+        int n = 0;
+        while (!check) {
+            System.out.print(" ");
+            try {
+                n = input.nextInt();
+                check = true;
+            } catch (Exception e) {
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+
+    public static boolean checkSNT(int n) {
+        if (n > 1) {
+            for (int i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void lietKeUocSNT(int n) {
+        int count = 0;
+        System.out.print("\nCac uoc nguyen to khac nhau cua " + n + " la:");
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0 && (checkSNT(i))) {
+                System.out.print(" " + i);
+                count++;
+            }
+        }
+        System.out.println("\n");
+    }
+
+   
+}
+
+
+                                </textarea>
+                            </div>    
+                        </div>   
+                        <div class="tuan1 w1-tp11">
+                            <h4> Bài <span id="tenBai">11:</span> <span id="debai">Viết chương trình tráo đổi ngẫu nhiên vị trí một dãy số cho trước. Để lấy một số int ngẫu nhiên từ 0 đến n-1 ta dùng lệnh int i = Random.nextInt(n)
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan1;
+package tuan1;
+import java.util.*;
+import java.lang.*;
+public class BaiTap11 {
+
+    public static void main(String[] args) {
+    	System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Kết quả: ");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập dãy số:");
+        int n = scanner.nextInt();
+        String m = String.valueOf(n);
+        String []b = m.split("");
+        String arr1[] = new String[b.length];
+        Random random = new Random();
+        String[]arr2 = manglucsau(b);
+        for(int i = 0 ; i  < b.length ; i++){
+            int vitri = random.nextInt(arr2.length);
+            arr1[i]=arr2[vitri];
+            arr2[vitri]="0";
+            arr2 = manglucsau(arr2);
+        }
+        System.out.println("Dãy số sau khi hoán đổi: ");
+        for(int i=0;i< arr1.length;i++){
+            System.out.print(arr1[i]);
+        }
+    }
+    public static String[] manglucsau(String[]b){
+        List<String>a = new ArrayList<>();
+        for(int i= 0 ; i <b.length;i++){
+            if(b[i]!="0"){
+                a.add(b[i]);
+            }
+        }
+        String arr2[] = new String[a.size()];
+        for(int i = 0 ; i < a.size();i++){
+        	arr2[i] = a.get(i);
+        }
+        return arr2;
+    }
+
+}
+                                </textarea>
+                            </div>    
+                        </div>  
+                        <div class="tuan1 w1-tp12">
+                            <h4> Bài <span id="tenBai">12:</span> <span id="debai">Viết chương trình nhập chiều cao h từ bàn phím, sau đó hiển thị các tam giác hình sao có chiều cao h như dưới đây. Chú ý có kiểm tra điều kiện của h: 2<=h<=10. Nếu h nằm ngoài đoạn trên, yêu cầu người dùng nhập lại. (cho lựa chọn in tam giác xuôi hoặc ngược)
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan1;
+import java.util.Scanner;
+import java.util.*;
+import java.lang.*;
+public class BaiTap12 {
+
+	public static void main(String[] args) throws Exception {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập N=");
+        int n = scanner.nextInt();
+        while (nhap(n)){
+            System.out.println("Nhập sai vui lòng nhập lại");
+            System.out.println("Nhập N=");
+            n = scanner.nextInt();
+        }
+        for(int i=1; i<=n; i++) {
+        	for(int j=1; j<=i; j++) {
+        		System.out.print("* ");
+        	}
+        	System.out.println("");
+        }
+       
+	}
+	public static boolean nhap(int n){
+        if( (n>=2) && (n<=10)){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+	
+}
+
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan1 w1-tp13">
+                            <h4> Bài <span id="tenBai">13:</span> <span id="debai">Cho số tự nhiên N bất kỳ
+                                Tính tổng S=1+1/(1+2) + 1/(1+2+3) +…+ 1/(1+2+3+..+N)                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan2_3;
+import java.util.*;
+public class BaiTap1 {
+
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+		Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập số:");
+        int n = scanner.nextInt();
+        float kq =0;
+        float j =0;
+        for(int i=1 ; i <=n ; i++){
+            j=j+i;
+            kq+=(float)(1/j);
+        }
+        
+        System.out.println("Kết quả: "+kq);
+	}
+
+}
+
+
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan1 w1-tp14">
+                            <h4> Bài <span id="tenBai">14:</span> <span id="debai">Cho số tự nhiên N bất kỳ, tính tổng
+                                S= 1+ 1/2! + 1/3! + … + 1/N!                                          
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan2_3;
+package tuan2_3;
+import java.util.*;
+public class BaiTap2 {
+
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập số:");
+        int n = scanner.nextInt();
+        float kq =0;
+        float j =1;
+        for(int i=1 ; i <=n ; i++){
+            j*=i;
+            kq+=(float)(1/j);
+        }
+        
+        System.out.println("Kết quả: "+kq);
+	}
+
+}
+
+
+                                </textarea>
+                            </div>    
+                        </div>    
+                        <div class="tuan1 w1-tp15">
+                            <h4> Bài <span id="tenBai">15:</span> <span id="debai">Cho số tự nhiên N bất kỳ, 
+                                Tính tổng S=1+1/(1+2!) + 1/(1+2!+3!)+ ..+ 1/(1+2!+3!+..+N!)                                
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan2_3;
+import java.util.Scanner;
+public class BaiTap3 {
+
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập số:");
+        int n = scanner.nextInt();
+        float kq =0;
+        float j =0;
+        float k =1;
+        for(int i=1 ; i <=n ; i++){
+            k*=i;
+            j+=k;
+            kq+=(float)(1/j);
+        }
+        
+        System.out.println("Kết quả: "+kq);
+	}
+
+}
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan1 w1-tp16">
+                            <h4> Bài <span id="tenBai">16:</span> <span id="debai">Dãy Fibonaxi 1, 2, 3, … F(k) = F(k-1) + F(k-2). Tính số Fibonaxi thứ N.                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan2_3;
+import java.util.*;
+public class BaiTap4 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+		Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập số:");
+        int n = scanner.nextInt();
+        int kq = Fibonaxi(n);
+        System.out.println("Kết quả: "+kq);
+	}
+	public static int Fibonaxi(int k){
+        if(k==1){
+            return 1;
+        }
+        else if(k==0){
+            return 0;
+        }
+        else{
+            return Fibonaxi(k-1)+Fibonaxi(k-2);
+        }
+	}
+}
+
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan2 w2-tp1">
+                            <h4> Bài <span id="tenBai">1:</span> <span id="debai">Cho một dãy số tự nhiên, viết chương trình sắp xếp dãy này theo thứ tự giảm dần.                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.*;
+public class BaiTap1 {
+	public static void main(String[] args) {
+        System.out.println("Họ và tên: Lương Thị Lương");
+        System.out.println("MSSV : 20181067");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập độ dài mảng:");
+        int n = scanner.nextInt();
+        System.out.println("Nhập dãy số:");
+        List<Integer> c = new ArrayList<>();
+        for(int i = 0 ; i < n ; i++){
+            int nhap = scanner.nextInt();
+            c.add(nhap);
+        }
+        c.stream().sorted(new Comparator<Integer>() {
+            public int compare(Integer o1, Integer o2) {
+                return o2.compareTo(o1);
+            }
+        }).forEach(s-> System.out.print(s+" "));
+    }
+}
+
+
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan2 w2-tp2">
+                            <h4> Bài <span id="tenBai">2:</span> <span id="debai">Cho dãy số tự nhiên, in ra màn hình tất cả các số nguyên tố của dãy này.                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.*;
+public class BaiTap2 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập độ dài dãy số:");
+        int n = scanner.nextInt();
+        System.out.println("Nhập dãy số: ");
+        int b[] = new int[n];
+        for(int i = 0 ; i < n ; i ++){
+            int nhap = scanner.nextInt();
+            b[i] = nhap;
+        }
+        List<Integer>c = new ArrayList<>();
+        for(int i = 0 ; i < b.length ; i++){
+            if(isCheck(b[i])){
+                c.add(b[i]);
+            };
+        }
+        System.out.println("Số nguyên tố của dãy này là: ");
+        c.stream().forEach(s-> System.out.print(s +" "));
+        
+    }
+
+    public static boolean isCheck(int input){
+        boolean KT = true;
+        if(input==1){
+            KT=false;
+            return KT;
+        }
+        for(int i=2; i<input;i++){
+            if(input%i==0){
+                KT=false;
+                break;
+            }
+        }
+        return KT;
+        
+    }
+}
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan2 w2-tp3">
+                            <h4> Bài <span id="tenBai">3:</span> <span id="debai">Cho một dãy các số tự nhiên, tìm và in ra 1 giá trị min của dãy này và tất cả các chỉ số ứng với giá trị min này.                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.*;
+public class BaiTap3 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập độ dài của dãy:");
+        int n = scanner.nextInt();
+
+        List<Integer> b = new ArrayList();
+        System.out.println("Nhập dãy số : ");
+        for(int i= 0 ; i<n;i++){
+            int nhap = scanner.nextInt();
+            b.add(nhap);
+        }
+       
+        int min = b.get(0);
+        int vitri= 0;
+        for(int i= 0 ; i<n;i++){
+        	if(min > b.get(i)) {
+        		min= b.get(i);
+        		vitri = i;
+        	} else min= min;
+        }
+        System.out.println("Min : "+ min);
+        System.out.println("Tại vị trí : "+ vitri);
+    }
+}
+
+                                </textarea>
+                            </div>    
+                        </div>   
+                        <div class="tuan2 w2-tp4">
+                            <h4> Bài <span id="tenBai">4:</span> <span id="debai">Cho một dãy các số tự nhiên, tìm và in ra 1 giá trị max của dãy này và tất cả các chỉ số ứng với giá trị max này.                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class BaiTap4 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập độ dài của dãy:");
+        int n = scanner.nextInt();
+
+        List<Integer> b = new ArrayList();
+        System.out.println("Nhập dãy số : ");
+        for(int i= 0 ; i<n;i++){
+            int nhap = scanner.nextInt();
+            b.add(nhap);
+        }
+       
+        int max = b.get(0);
+        int vitri= 0;
+        for(int i= 0 ; i<n;i++){
+        	if(max < b.get(i)) {
+        		max= b.get(i);
+        		vitri = i;
+        	} else max= max;
+        }
+        System.out.println("Max : "+ max);
+        System.out.println("Tại vị trí : "+ vitri);
+    }
+}
+
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan2 w2-tp5">
+                            <h4> Bài <span id="tenBai">5:</span> <span id="debai">Cho một dãy số tự nhiên, hãy đếm xem trong dãy số trên có bao nhiêu số nguyên tố, có bao nhiêu hợp số.                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap5 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập độ dài của dãy số:");
+        int n = scanner.nextInt();
+        System.out.println("Nhập số:");
+        int b[] = new int[n];
+        for(int i = 0 ; i <n ; i++){
+            int nhap = scanner.nextInt();
+            b[i] = nhap;
+        }
+        List<Integer>c = new ArrayList<>();
+        List<Integer>d = new ArrayList<>();
+        for(int i = 0 ; i < b.length ; i++){
+            if(isCheck(b,b[i])){
+                c.add(b[i]);
+            };
+            if(isCheckHopso(b,b[i])==false){
+                d.add(b[i]);
+            }
+        }
+        System.out.println("Nguyên tố: "+ c.size());
+
+        System.out.println("Hợp số: "+d.size());
+    }
+
+    public static boolean isCheck(int b[],int input){
+        boolean KT = true;
+        if(input==1){
+            KT=false;
+            return KT;
+        }
+        for(int i=2; i<input;i++){
+            if(input%i==0){
+                KT=false;
+                break;
+            }
+        }
+        return KT;
+    }
+    public static boolean isCheckHopso(int b[],int input){
+        boolean KT = true;
+        if (input == 1) {
+            KT=true;
+            return KT;
+        }
+        for(int i=2;i<input;i++){
+            if(input%i==0){
+                KT=false;
+                break;
+            }
+        }
+
+        return KT;
+    }
+}
+                                </textarea>
+                            </div>    
+                        </div>  
+                        <div class="tuan2 w2-tp6">
+                            <h4> Bài <span id="tenBai">6:</span> <span id="debai">Cho một dãy số tự nhiên, hãy in ra tất cả các số hạng của dãy trên thỏa mãn: số này là ước số thực sự của 1 số hạng khác trong dãy trên.                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+public class BaiTap6 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập độ dài dãy số:");
+        int n = scanner.nextInt();
+        System.out.println("Nhập số: ");
+        int b[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            int nhap = scanner.nextInt();
+            b[i] =nhap;
+        }
+        List<Integer> c = new ArrayList<>();
+
+        for(int i = 0 ; i < b.length;i++){
+            if(b[i]==1){
+                c.add(b[i]);
+                continue;
+            }
+            for(int j=0;j<b.length;j++){
+                if(b[i]==b[j]){
+                    continue;
+                }
+                if(b[j]%b[i]==0&&b[i]!=b[j]){
+                    c.add(b[i]);
+                }
+            }
+        }
+        c=c.stream().sorted().collect(Collectors.toList());
+        for(int i = 0 ; i <c.size()-1;i++){
+            for(int j=i+1;j<c.size();j++){
+                if(c.get(i)==c.get(j)){
+                    c.set(j,0);
+                }
+            }
+        }
+        System.out.print("Kết quả: ");
+        c.stream().filter(i->i!=0).forEach(s-> System.out.print( s+" "));
+    }
+}
+                                </textarea>
+                            </div>    
+                        </div>  
+                        <div class="tuan2 w2-tp7">
+                            <h4> Bài <span id="tenBai">7:</span> <span id="debai">Cho một dãy số tự nhiên, hãy tìm 1 số tự nhiên nhỏ nhất c không bằng bất cứ số nào trong dãy trên                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+public class BaiTap7 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập độ dài dãy số:");
+        int n = scanner.nextInt();
+        System.out.println("Nhập số: ");
+        int b[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            int nhap = scanner.nextInt();
+            b[i] =nhap;
+        }
+        int min = b[0];
+        for(int i= 0 ; i<n;i++){
+        	if(min > b[i]) {
+        		min= b[i];
+        		
+        	} else min= min;
+        }
+        System.out.println("Kết quả: "+ min);
+    }
+}
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan2 w2-tp8">
+                            <h4> Bài <span id="tenBai">8:</span> <span id="debai">Cho một dãy số nguyên bất kỳ, hãy xóa đi trong dãy này các số hạng =0 và in ra màn hình các số còn lại.                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+public class BaiTap8 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Nhập độ dài dãy số:");
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        System.out.println("Nhập số: ");
+        int b[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            int nhap = scanner.nextInt();
+            b[i] =nhap;
+        }
+        List<Integer> c = new ArrayList<>();
+        for(int i=0;i<b.length;i++){
+            c.add(b[i]);
+        }
+        c.stream().filter(s->s!=0).forEach(s-> System.out.println(s));
+	}
+}
+
+                                </textarea>
+                            </div>    
+                        </div>     
+                        <div class="tuan2 w2-tp9">
+                            <h4> Bài <span id="tenBai">9:</span> <span id="debai">Cho một dãy số nguyên bất kỳ, cho trước 1 số c. Hãy đếm có bao nhiêu số của dãy trên =c; >c; <c.                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap9 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập độ dài dãy số:");
+        int n = scanner.nextInt();
+        System.out.println("Nhập số: ");
+        int b[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            int nhap = scanner.nextInt();
+            b[i] =nhap;
+        }
+        List<Integer> c = new ArrayList<>();
+        for(int i=0;i<b.length;i++){
+            c.add(b[i]);
+        }
+        System.out.println("Nhập số C");
+        int soC = scanner.nextInt();
+        System.out.println("Số các số bằng số C:");
+        int count1=0;
+        for(int i=0;i<c.size();i++){
+            if(soC==c.get(i)){
+            	count1+=1;
+                
+            }
+        }
+        System.out.println(count1);
+        System.out.println("Số các số nhỏ hơn số C:");
+        int count2=0;
+        for(int i=0;i<c.size();i++){
+            if(soC>c.get(i)){
+            	count2 +=1;
+                
+            }
+        }
+        System.out.println(count2);
+        System.out.println("Số các số lớn hơn số C:");
+        int count3=0;
+        for(int i=0;i<c.size();i++){
+            if(soC<c.get(i)){
+            	count3 +=1;
+                
+            }
+        }
+        System.out.println(count3);
+
+    }
+}
+                                </textarea>
+                            </div>    
+                        </div>  
+                        <div class="tuan2 w2-tp10">
+                            <h4> Bài <span id="tenBai">10:</span> <span id="debai">Cho một dãy số nguyên bất kỳ, hãy tìm ra 1 một dãy số liền nhau dài nhất bao gồm các số bằng nhau. Hãy in ra số lượng và các chỉ số đầu tiên của dãy con này.                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+public class BaiTap10 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập độ dài dãy số:");
+        int n = scanner.nextInt();
+        System.out.println("Nhập số: ");
+        int b[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            int nhap = scanner.nextInt();
+            b[i] =nhap;
+        }
+        List<Integer> c = new ArrayList<>();
+        for(int i=0;i<b.length;i++){
+            c.add(b[i]);
+        }
+        c=c.stream().sorted().collect(Collectors.toList());
+        int max = 1;
+        List<Integer>d = new ArrayList<>();
+        for(int i = 0 ; i < c.size()-1;i++){
+            int count =1;
+            for(int j=i+1;j<c.size();j++){
+                if(c.get(j)!=c.get(i)){
+                    break;
+                }
+                else{
+                    ++count;
+                }
+            }
+            if(max<count){
+                max=count;
+                d.add(c.get(i));
+                d.add(max);
+            }
+
+        }
+        for(int i=1;i<d.size();i+=2){
+            if(max==d.get(i)){
+                System.out.println("Số lượng các số trong dãy: "+max );
+                System.out.println("Chỉ số đầu tiên: "+d.get(i-1));
+                break;
+            }
+        }
+        
+	}
+}
+
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan2 w2-tp11">
+                            <h4> Bài <span id="tenBai">11:</span> <span id="debai">Cho một dãy số nguyên bất kỳ. Hãy tìm 1 một dãy con liên tục đơn điệu tăng dài nhất của dãy trên.                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+public class BaiTap11 {
+	public static void main(String[] args) {
+	System.out.println("Họ tên: Lưu Thị Lương ");
+    System.out.println("MSSV: 20181067");
+    System.out.println("Lớp: SPKT-CNTT");
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Nhập độ dài dãy số:");
+    int n = scanner.nextInt();
+    System.out.println("Nhập số: ");
+    int b[] = new int[n];
+    for (int i = 0; i < n; i++) {
+        int nhap = scanner.nextInt();
+        b[i] =nhap;
+    }
+    List<Integer> c = new ArrayList<>();
+    for (int i = 0; i < b.length; i++) {
+        c.add(b[i]);
+    }
+    List<Integer>d = new ArrayList<>();
+    int max = 1;
+    for(int i=0;i<c.size();i++){
+        int count=1;
+        for(int j=i;j<c.size()-1;j++){
+            if(c.get(j)<=c.get(j+1)){
+                ++count;
+            }
+            else{
+                break;
+            }
+        }
+        if(max<count){
+            max=count;
+            d.add(max);
+            d.add(i);
+        }
+    }
+    for(int i=0;i<d.size();i+=2){
+        if(d.get(i)==max){
+            System.out.println("Độ dài dãy con dài nhất liên tục đơn điệu tăng là: "+max );
+            System.out.println("Chỉ số dãy con đó là");
+            int vitri=d.get(i+1);
+            for(int j=0;j<max;j++){
+                System.out.print(c.get(vitri)+" ");
+                vitri++;
+            }
+        }
+    }
+}
+                                </textarea>
+                            </div>    
+                        </div>  
+                        <div class="tuan2 w2-tp12">
+                            <h4> Bài <span id="tenBai">12:</span> <span id="debai">Dãy số a[ ] được gọi là dãy con của b[ ] nếu từ b [ ] xóa đi 1 vài số sẽ thu được   a[ ]. Cho trước 2 dãy số nguyên a[ ]; b[ ]. Hãy kiểm tra xem a[ ] có là dãy con của b[ ] hay không?.                               
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+public class BaiTap12 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+	    System.out.println("MSSV: 20181067");
+	    System.out.println("Lớp: SPKT-CNTT");
+	    Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập độ dài số A:");
+        int n = scanner.nextInt();
+        int[] dayA = new int[n];
+        System.out.println("Nhập dãy số A:");
+        for(int i = 0 ; i <  n; i ++){
+            int nhap = scanner.nextInt();
+            dayA[i] = nhap;
+        }
+        System.out.println("Nhập độ dài số B:");
+        int m = scanner.nextInt();
+        System.out.println("Nhập dãy số B:");
+        int[] dayB= new int[m];
+
+        for(int i = 0 ; i < m ; i ++){
+            int nhap = scanner.nextInt();
+            dayB[i] = nhap;
+        }
+
+        if(isContains(dayA,dayB)){
+            System.out.println("A là dãy con của B");
+        }
+        else{
+            System.out.println("A không là dãy con của B");
+        }
+    }
+
+
+
+    public static boolean isContains(int[]a , int[]b){
+        boolean result = false;
+        int sizeA = a.length;
+        int sizeB= b.length;
+        if(sizeA>sizeB){
+            return result;
+        }
+        for(int i=0;i<sizeB;i++){
+            if(b[i]==a[0] && (sizeB-i)>=sizeA){
+                int k=i;
+                for(int j=0;j<sizeA;j++){
+                    if(a[j]==b[k]){
+                        result = true;
+                        ++k;
+                    }
+                    else{
+                        break;
+                    }
+                }
+            }
+        }
+        System.out.println(result);
+        return result;
+    }
+}
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan2 w2-tp13">
+                            <h4> Bài <span id="tenBai">13:</span> <span id="debai">Nhập vào kích thước ô vuông n*n, kiểm tra 3<=n<= 8. Hiển thị ra màn hình kết quả như màn hình                               
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuann3_4;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+public class BaiTap13 {
+	static int count=0;
+    public static void main(String[] args){
+        System.out.println("Họ và tên: Lương Thị Lương");
+        System.out.println("MSSV : 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        init();
+    }
+    public static void init(){
+        int[][] matrix;
+        int m,n;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập n: ");
+        n = scanner.nextInt();
+        matrix = new int[n][n];
+        topRight(matrix,0,0,n-1,n-1);
+        display(matrix);
+    }
+
+    public static void topRight(int matrix[][] , int x1, int y1,int x2, int y2){
+        for(int i = x1; i<=x2;i++){
+            matrix[y1][i] = count++;
+        }
+        for(int i = y1+1 ; i<=y2;i++){
+            matrix[i][x2] = count++;
+        }
+        if(x2-x1 > 0 && y2-y1>0){
+            y1++;
+            x2--;
+            bottomLeft(matrix,x1,y1,x2,y2);
+        }
+    }
+
+    public static void bottomLeft(int matrix[][] , int x1, int y1,int x2, int y2){
+        for(int i = x2;i>=x1;i--){
+            matrix[y2][i] = count++;
+        }
+        for(int i = y2-1;i>=y1;i--){
+            matrix[i][x1] = count++;
+        }
+        if(x2-x1 > 0 && y2-y1>0){
+            y2--;
+            x1++;
+            topRight(matrix,x1,y1,x2,y2);
+        }
+    }
+
+    public static void display(int matrix[][]){
+        for(int[] x: matrix){
+            for(int i: x) System.out.printf("%5d",i);
+            System.out.println("\n");
+        }
+    }
+	
+}
+                                </textarea>
+                            </div>    
+                        </div>    
+                        <div class="tuan3 w3-tp1">
+                            <h4> Bài <span id="tenBai">1:</span> <span id="debai">Cho trước 1 xâu ký tự là họ tên người đầy đủ nhưng khi nhập có thể thừa một số dấu cách. Hãy xóa đi các dấu cách thừa và in ra họ tên chính xác.                               
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+public class BaiTap1 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập tên đầy đủ: ");
+        String n = scanner.nextLine();
+        String []arr = n.split("");
+        int count=0;
+        List<String>fullName = new ArrayList<>();
+        for(int i = 0 ; i <arr.length;i++){
+            if(arr[0].equals(" ")&&i==0){
+                for(int j=i+1;j< arr.length-1;j++){
+                    if(!arr[j].equals(" ")){
+                        i=j;
+                        break;
+                    }
+                }
+            }
+            if(arr[i].equals(" ")){
+                fullName.add(arr[i]);
+                for(int j=i+1;j<arr.length-1;j++){
+                    if(!arr[j].equals(" ")){
+                        fullName.add(arr[j]);
+                        i=j;
+                        break;
+                    }
+                }
+            }
+            else{
+                fullName.add(arr[i]);
+            }
+        }
+        fullName.stream().forEach(s-> System.out.print(s));
+    }
+}
+
+                                </textarea>
+                            </div>    
+                        </div>   
+                        <div class="tuan3 w3-tp2">
+                            <h4> Bài <span id="tenBai">2:</span> <span id="debai">Cho trước xâu ký tự bất kỳ. Hãy đếm xem trong xâu có bao nhiêu lần xuất hiện xâu con “abc”                               
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap2 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        String[]abc={"a","b","c"};
+        System.out.println("Nhập dãy: ");
+        String n = scanner.nextLine();
+        String[] arr = n.split("");
+        if (arr.length < 3) {
+            System.out.println("Số lần xuất hiện: 0");
+        } else {
+            int count=0;
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i].equals("a") && arr.length-i>=3) {
+                    for (int j=0;j<3;j++){
+                        if(!arr[i+1].equals(abc[j+1])){
+                            break;
+                        }
+                        else{
+                            ++count;
+                        }
+                    }
+
+                }
+            }
+            System.out.println("Số dãy con là abc: "+count);
+        }
+    }
+
+}
+
+
+                                </textarea>
+                            </div>    
+                        </div>  
+                        <div class="tuan3 w3-tp3">
+                            <h4> Bài <span id="tenBai">3:</span> <span id="debai">Cho trước 1 xâu ký tự là họ tên người đầy đủ, hãy tách ra phần tên của người này                               
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap3 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập tên đầy đủ: ");
+        String n = scanner.nextLine();
+        String[] arr = n.split("");
+        for(int i = arr.length-1; i>0;i--){
+            if(arr[i].equals(" ")){
+                for(int j=i+1;j<arr.length;j++){
+                    System.out.print(arr[j]);
+                }
+                break;
+            }
+        }
+    }
+
+}
+
+
+
+                                </textarea>
+                            </div>    
+                        </div>   
+                        <div class="tuan3 w3-tp4">
+                            <h4> Bài <span id="tenBai">4:</span> <span id="debai">Cho trước 1 xâu ký tự là họ tên người đầy đủ, hãy tách ra phần họ của người này                               
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap4 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+        System.out.println("MSSV: 20181067");
+        System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Nhập tên đầy đủ: ");
+        Scanner scanner = new Scanner(System.in);
+        String n = scanner.nextLine();
+        String[] arr = n.split("");
+        for(int i= 0; i< arr.length;i++){
+            if(arr[i].equals(" ")){
+                for(int j=0;j<i;j++){
+                    System.out.print(arr[j]);
+                }
+                break;
+            }
+        }
+    }
+
+}
+                                </textarea>
+                            </div>    
+                        </div>  
+                        <div class="tuan3 w3-tp5">
+                            <h4> Bài <span id="tenBai">5:</span> <span id="debai">Cho một xâu ký tự bao gồm toàn các ký tự 0,1. Hãy biến đổi xâu này theo cách 0🡪1, 1🡪0 và in ra kết quả                               
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap5 {
+	public static void main(String[] args) {
+	System.out.println("Họ tên: Lưu Thị Lương ");
+    System.out.println("MSSV: 20181067");
+    System.out.println("Lớp: SPKT-CNTT");
+	Scanner scanner = new Scanner(System.in);
+    System.out.println("Nhập sau kí tự:");
+    String n = scanner.nextLine();
+    String[]a=n.split("");
+    System.out.println("Xâu ban đầu ");
+    for(int i=0;i<a.length;i++){
+        System.out.print(a[i]);
+    }
+    System.out.println("\n");
+    for(int i=0;i<a.length;i++){
+        if(a[i].equals("0")){
+            a[i]="1";
+        }
+        else if(a[i].equals("1")){
+            a[i]="0";
+        }
+    }
+    System.out.println("Xâu lúc sau:");
+    for(int i=0;i<a.length;i++){
+        System.out.print(a[i]);
+    }
+}
+
+}
+
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan3 w3-tp6">
+                            <h4> Bài <span id="tenBai">6:</span> <span id="debai">Cho trước xâu ký tự S, in ra xâu S1 ngược lại xâu S.                               
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap6 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+	    System.out.println("MSSV: 20181067");
+	    System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Nhập sau kí tự:");
+        Scanner scanner = new Scanner(System.in);
+        String n = scanner.nextLine();
+        String[]a=n.split("");
+        System.out.println("Xâu ban đầu");
+        for(int i=0;i<a.length;i++){
+            System.out.print(a[i]);
+        }
+        System.out.println("");
+        System.out.println("Xâu lúc sau:");
+        for(int i=a.length-1;i>=0;i--){
+            System.out.print(a[i]);
+        }
+    }
+
+
+}
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan3 w3-tp7">
+                            <h4> Bài <span id="tenBai">7:</span> <span id="debai">Cho trước xâu ký tự S. Hãy biến đổi S theo quy tắc sau: Chữ số thì biến thành “$”, ký tự thì giữ nguyên.                               
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap7 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+	    System.out.println("MSSV: 20181067");
+	    System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Nhập xâu kí tự:");
+        Scanner scanner = new Scanner(System.in);
+        String n = scanner.nextLine();
+        String[] arr = n.split("");
+        System.out.println("Xâu ban đầu: ");
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]);
+        }
+        for(int i=0;i<arr.length;i++){
+            if(isCheckKyTu(arr[i])){
+                arr[i]="$";
+            }
+        }
+        System.out.println("");
+        System.out.println("Xâu lúc sau: ");
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]);
+        }
+    }
+    public static boolean isCheckKyTu(String input){
+        String mang[]={"1","2","3","4","5","6","7","8","9","0"};
+        for(int i =0;i<mang.length;i++){
+            if(input.equals(mang[i])){
+                return true;
+            }
+        }
+        return false;
+    }
+
+}
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan3 w3-tp8">
+                            <h4> Bài <span id="tenBai">8:</span> <span id="debai">Cho trước 2 xâu ký tự S1, S2. Hãy đếm xem xâu S1 xuất hiện trong S2 tại bao nhiêu vị trí.                              
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap8 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+	    System.out.println("MSSV: 20181067");
+	    System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Nhập xâu kí tự:");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập xâu ký tự S1: ");
+        String n = scanner.nextLine();
+        String[] xauA = n.split("");
+        System.out.println("Nhập xâu ký tự S2: ");
+        String n1 = scanner.nextLine();
+        String[] xauB = n1.split("");
+        boolean KT = true;
+        int count=0;
+        if(xauA.length > xauB.length){
+            System.out.println("Xâu S1 không xuất hiện trong xâu S2 ");
+        }
+        else {
+            for (int i = 0; i < xauB.length; i++) {
+                if(xauB[i].equals(xauA[0]) && xauB.length >= xauA.length){
+                    for(int j=0;j< xauA.length;j++){
+                        if(!xauA[j].equals(xauB[i])){
+                            KT=false;
+                            break;
+                        }
+                        else{
+                            i++;
+                        }
+                    }
+                    if(KT){
+                        ++count;
+                    }
+                }
+
+            }
+        }
+        System.out.println("Số lần xuất hiện xâu S1 trong xâu S2 là: "+count);
+
+    }
+}
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan3 w3-tp9">
+                            <h4> Bài <span id="tenBai">9:</span> <span id="debai">Cho xâu S và 2 chỉ số i, j. Hãy đổi chỗ 2 vị trí i, j trong S.                              
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap9 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+	    System.out.println("MSSV: 20181067");
+	    System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Nhập xâu kí tự:");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập xâu ký tự S: ");
+        String n = scanner.nextLine();
+        String[] xauA = n.split("");
+        System.out.println("Chỉ số i: ");
+        int i= Integer.parseInt(scanner.nextLine());
+        System.out.println("Chỉ số j: ");
+        int j = Integer.parseInt(scanner.nextLine());
+
+        if(isCheckContains(i,j,xauA)){
+            System.out.println("Một trong 2 chỉ số không nằm trong dãy!\n Vui lòng kiểm tra lại!");
+        }
+        else{
+            System.out.println("Xâu ban đầu: ");
+            for(int h=0;h< xauA.length;h++){
+                System.out.print(xauA[h]);
+            }
+            System.out.println("");
+            System.out.println("Xâu lúc sau đổi chỗ: ");
+            String tmp = xauA[i];
+            xauA[i] = xauA[j];
+            xauA[j] =tmp;
+            for(int h=0;h< xauA.length;h++){
+                System.out.print(xauA[h]);
+            }
+        }
+
+    }
+
+    public static boolean isCheckContains(int i,int j,String[] xau){
+        if(i>= xau.length || j>= xau.length){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+}
+
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan3 w3-tp10">
+                            <h4> Bài <span id="tenBai">10:</span> <span id="debai">Cho mảng xâu ký tự S1, S2, ..Sn. Hãy tìm và in ra phần tử xâu có độ dài lớn nhất.                              
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+public class BaiTap10 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+	    System.out.println("MSSV: 20181067");
+	    System.out.println("Lớp: SPKT-CNTT");
+        System.out.println("Nhập số xâu kí tự:");       
+        Scanner scanner = new Scanner(System.in);
+        int n= scanner.nextInt();
+        List<String> arr = new ArrayList<String>();
+        for(int i=1; i<=n; i++) {
+        	System.out.println("Nhập xâu kí tự thứ "+i);
+        	Scanner scanner1 = new Scanner(System.in);
+            String n1= scanner1.next();
+        	arr.add(n1) ;
+        }
+//        System.out.print(arr);
+        Map<Integer,String>stringMap = new HashMap<>();
+        int max = arr.get(0).length();
+        for(int i=1;i < arr.size();i++){
+            if(max < arr.get(i).length()){
+                max = arr.get(i).length();
+                stringMap.put(1,arr.get(i));
+            }
+        }
+        System.out.println("Xâu có độ dài nhất là: "+stringMap.get(1));
+    }
+
+}
+
+                                </textarea>
+                            </div>    
+                        </div> 
+                        <div class="tuan3 w3-tp11">
+                            <h4> Bài <span id="tenBai">11:</span> <span id="debai">Cho danh sách họ tên đầy đủ học sinh. Hãy đếm xem có bao nhiêu bạn tên “An”.                              
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+public class BaiTap11 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+	    System.out.println("MSSV: 20181067");
+	    System.out.println("Lớp: SPKT-CNTT");
+	    System.out.println("Nhập số sinh viên :");       
+        Scanner scanner = new Scanner(System.in);
+        int n= scanner.nextInt();
+        List<String> arr = new ArrayList<String>();
+        for(int i=1; i<=n; i++) {
+        	System.out.println("Nhập SV thứ "+i);
+        	Scanner scanner1 = new Scanner(System.in);
+            String n1= scanner1.nextLine();
+        	arr.add(n1) ;
+        }
+        int count =0;
+	    for(int i=0;i<arr.size();i++){
+	    	int a1 = arr.get(i).length();
+	    	if(arr.get(i).lastIndexOf("An")== a1-2) {
+	    		count+=1;
+	    	}
+        }
+        System.out.println("Số bạn có tên An: "+count);
+
+    }
+
+}
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan3 w3-tp12">
+                            <h4> Bài <span id="tenBai">12:</span> <span id="debai">Cho danh sách họ tên đầy đủ học sinh. Hãy đếm xem có bao nhiêu bạn có phần đệm là  “Thị”.                              
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap12 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+	    System.out.println("MSSV: 20181067");
+	    System.out.println("Lớp: SPKT-CNTT");
+	    System.out.println("Nhập số sinh viên :"); 
+        Scanner scanner = new Scanner(System.in);
+        int n= scanner.nextInt();
+        List<String> arr = new ArrayList<String>();
+        for(int i=1; i<=n; i++) {
+        	System.out.println("Nhập SV thứ "+i);
+        	Scanner scanner1 = new Scanner(System.in);
+            String n1= scanner1.nextLine();
+        	arr.add(n1) ;
+        }
+        int count =0;
+	    for(int i=0;i<arr.size();i++){
+	    	int a1 = arr.get(i).length();
+	    	String[] s= arr.get(i).split("\\s");
+	    	for(int j=1; j<s.length-1; j++) {
+	    		if(s[j].contains("Thị")) {
+	    			count +=1;
+	    		}
+	    	}    	 
+        }
+        System.out.println("Số bạn có tên tên đệm là Thị: "+count);
+
+    }
+
+}
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan3 w3-tp13">
+                            <h4> Bài <span id="tenBai">13:</span> <span id="debai">Cho danh sách họ tên đầy đủ học sinh. Hãy đếm xem có bao nhiêu bạn  có tên bắt đầu bằng chữ “H”.                              
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap13 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+	    System.out.println("MSSV: 20181067");
+	    System.out.println("Lớp: SPKT-CNTT");
+	    System.out.println("Nhập số sinh viên :"); 
+        Scanner scanner = new Scanner(System.in);
+        int n= scanner.nextInt();
+        List<String> arr = new ArrayList<String>();
+        for(int i=1; i<=n; i++) {
+        	System.out.println("Nhập SV thứ "+i);
+        	Scanner scanner1 = new Scanner(System.in);
+            String n1= scanner1.nextLine();
+        	arr.add(n1) ;
+        }
+        int count =0;
+	    for(int i=0;i<arr.size();i++){
+	    	int a1 = arr.get(i).length();
+	    	String[] s= arr.get(i).split("\\s");
+	    	String s1 = s[s.length-1];
+	    	if(s1.indexOf("H")==0) {
+	    		count+=1;  				
+	    	}
+        }
+        System.out.println("Số bạn có tên bắt đầu bằng H: "+count);
+
+    }
+
+
+}
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan3 w3-tp14">
+                            <h4> Bài <span id="tenBai">14:</span> <span id="debai">Dãy xâu ký tự S1, S2,… được cho theo quy tắc sau: S1= “1111100000”, Sk thu được từ Sk-1 bằng cách thay đổi cho lần lượt các vị trí  1-2;  2-3;  3-4; 4-5; 5-6;  6-7; 7-8;  8-9; 9-10. Cho trước số tự nhiên N, Hãy in ra xâu Sn.                              
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap14 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+	    System.out.println("MSSV: 20181067");
+	    System.out.println("Lớp: SPKT-CNTT");
+	    System.out.println("Nhập n :"); 
+	    Scanner scanner = new Scanner(System.in);
+	    int n= scanner.nextInt();
+        List<String> arr = new ArrayList<String>();
+        String S1="1111100000";
+        arr.add(S1);
+        System.out.println(arr);
+        for(int i =0; i< n; i++) {
+        	String[] arr1 = arr.get(i).split("");
+     //   	System.out.print(arr1[3]);
+        	String tmp = arr1[0];
+        	for(int j=0; j< 9; j++) {
+        		arr1[j]= arr1[j+1];
+        	}
+        	arr1[9]=tmp;
+        	String[] s2 = new String[10];
+        	String result = "";
+        	for(int k=0; k<10; k++) {  
+        		result+=arr1[k];
+        	}
+        	arr.add(result);
+        	
+        }
+        System.out.print(arr.get(n-1));
+	}
+	
+}
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan3 w3-tp15">
+                            <h4> Bài <span id="tenBai">15:</span> <span id="debai">Cho trước 2 xâu ký tự S, S2. Hãy chèn xâu S1 vào giữa xâu S2 và in kết quả.                              
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap15 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+	    System.out.println("MSSV: 20181067");
+	    System.out.println("Lớp: SPKT-CNTT");
+	    String S1= "Thị";
+        String S2= "Lưu Lương";
+        System.out.println("Chèn xâu S1 vào giữa xâuS2:");
+        int tb = S2.length()/2;
+        String a1 = S2.substring(0,tb);
+        String a2=  S2.substring(S2.length()-tb-1);
+        System.out.println(a1+S1+" "+a2);
+    }
+
+}
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan3 w3-tp16">
+                            <h4> Bài <span id="tenBai">16:</span> <span id="debai">Cho trước 2 xâu S1, S2. Hãy xét xem xâu S1 có phải là xâu con của S2 nếu xóa bỏ vài kí tự của xâu S2 ta được xâu S1.                              
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package tuan4_5;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class BaiTap16 {
+	public static void main(String[] args) {
+		System.out.println("Họ tên: Lưu Thị Lương ");
+	    System.out.println("MSSV: 20181067");
+	    System.out.println("Lớp: SPKT-CNTT");
+	    String xau1= "Lưu";
+        String xau2= "LưuThi";
+        boolean KT = true;
+        for(int i=0;i<xau1.length();i++){
+            if(!xau2.contains(xau1.split("")[i])){
+                KT = false;
+            }
+        }
+        if(KT){
+            System.out.println("Xâu 1 là con của xâu 2!");
+        }
+        else{
+            System.out.println("Xâu 1 không là con của xâu 1");
+        }
+    }
+
+}
+                                </textarea>
+                            </div>    
+                        </div>
+                        <div class="tuan3 w3-tp17">
+                            <h4> Bài tự chọn <span id="tenBai">:</span> <span id="debai">Một thư viện cần quản lý các tài liệu bao gồm Sách, Tạp chí, Báo. Mỗi tài liệu gồm có các thuộc tính sau: Mã tài liệu(Mã tài liệu là duy nhất), Tên nhà xuất bản, số bản phát hành.                              
+                            
+                            </span></h4>
+                            <hr>
+                            <button type="button">Code</button>
+                            <div id="body--result">
+                                    <div id="code">
+            
+                                    </div>
+                                    <textarea cols="10" rows="10" id="output">
+package qltv;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+public class Main {
+	public static final List<TaiLieu>taiLieuList = new ArrayList<>();
+
+    public static final BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+
+
+    public static String maTaiLieu;
+    public static String tenNhaXuatBan;
+    public static int soBanPhatHanh;
+
+    public static void main(String [] args) throws IOException {
+        System.out.println("Họ và tên: Lưu Thị Lương");
+        System.out.println("MSSV: 20181063");
+        System.out.println("Lớp: SPKT-CNTT");
+        System.out.println(menu());
+        chonChucNang();
+    }
+
+    public static void chonChucNang() throws IOException {
+        System.out.println("Nhập chức năng: ");
+        int chucnang = Integer.parseInt(bf.readLine());
+        while (chucnang>0 && chucnang<6) {
+            switch (chucnang) {
+                case 1:
+                    themMoi();
+                    break;
+                case 2:
+                    xoaTaiLieu();
+                    break;
+                case 3:
+                    hienThiThongTin();
+                    break;
+                case 4:
+                    timKiemThongTin();
+                    break;
+                case 5:
+                    exit();
+                    break;
+            }
+            if(chucnang==5){
+                chucnang=6;
+            }
+            else {
+                System.out.println("-------------------------------");
+                System.out.println("Chọn chức năng");
+                System.out.println(menu());
+                System.out.println("Nhập chức năng: ");
+                chucnang = Integer.parseInt(bf.readLine());
+            }
+        }
+    }
+
+
+
+    public static String menu(){
+        String menu="1. Thêm mới tài liệu."+"\n"+
+                    "2. Xóa tài liệu"+"\n"+
+                    "3. Hiển thị thông tin tài liệu"+"\n"+
+                    "4. Tìm kiếm thông tin tài liệu"+"\n"+
+                    "5. Thoát khỏi chương trình";
+        return menu;
+    }
+
+    // chức năng 1
+    public static void themMoi() throws IOException {
+        System.out.println("------------------------------------");
+        System.out.println("BẠN ĐÃ CHỌN CHỨC NĂNG THÊM MỚI TÀI LIỆU");
+        System.out.println(menuChucNang1());
+        System.out.println("Nhập chức năng:");
+        int cn = Integer.parseInt(bf.readLine());
+
+        while (cn>0 && cn<5){
+            switch (cn){
+                case 1: themMoiSach();
+                break;
+                case 2:themMoiTapChi();
+                break;
+                case 3:themBao();
+                break;
+                case 4:thoatChucNangThemMoi();
+                break;
+            }
+            if(cn==4){
+                cn=5;
+            }
+            else {
+                System.out.println("-------------------------------");
+                System.out.println("Chọn chức năng");
+                System.out.println(menuChucNang1());
+                cn = Integer.parseInt(bf.readLine());
+            }
+        }
+        System.out.println(menu());
+        chonChucNang();
+    }
+
+    public static void themMoiSach() throws IOException {
+        System.out.println("THÊM MỚI SÁCH");
+        System.out.println("Nhập mã tài liệu:");
+        maTaiLieu = bf.readLine();
+        System.out.println("Nhập tên nhà xuất bản:");
+        tenNhaXuatBan=  bf.readLine();
+
+
+
+        System.out.println("Nhập số bản phát hành:");
+        soBanPhatHanh = Integer.parseInt(bf.readLine());
+        System.out.println("Nhập tên tác giả");
+        String tenTacGia = bf.readLine();
+        System.out.println("Nhập số trang:");
+        int soTrang = Integer.parseInt(bf.readLine());
+        Sach sach = new Sach(maTaiLieu,tenNhaXuatBan,soBanPhatHanh,tenTacGia,soTrang);
+        taiLieuList.add(sach);
+        System.out.println("Thêm mới SÁCH thành công!");
+    }
+
+    public static void themMoiTapChi() throws IOException {
+        System.out.println("THÊM MỚI TẠP CHÍ");
+        System.out.println("Nhập mã tài liệu:");
+        maTaiLieu =  bf.readLine();
+        System.out.println("Nhập tên nhà xuất bản:");
+        tenNhaXuatBan=  bf.readLine();
+        System.out.println("Nhập số bản phát hành:");
+        soBanPhatHanh = Integer.parseInt(bf.readLine());
+        System.out.println("Nhập số phát hành:");
+        int soPhatHanh = Integer.parseInt(bf.readLine());
+        System.out.println("Nhập tháng phát hành:");
+        int thangPhatHanh = Integer.parseInt(bf.readLine());
+
+        TapChi tapChi = new TapChi(maTaiLieu,tenNhaXuatBan,soBanPhatHanh,soPhatHanh,thangPhatHanh);
+        taiLieuList.add(tapChi);
+        System.out.println("Thêm mới tạp chí thành công!");
+    }
+
+    public static void themBao() throws IOException {
+        System.out.println("THÊM MỚI BÁO");
+        System.out.println("Nhập mã tài liệu:");
+        maTaiLieu = bf.readLine();
+        System.out.println("Nhập tên nhà xuất bản:");
+        tenNhaXuatBan= bf.readLine();
+        System.out.println("Nhập số bản phát hành:");
+        soBanPhatHanh =  Integer.parseInt(bf.readLine());
+        System.out.println("Nhập ngày phát hành:");
+        int ngayPhatHanh =  Integer.parseInt(bf.readLine());
+        Bao bao = new Bao(maTaiLieu,tenNhaXuatBan,soBanPhatHanh,ngayPhatHanh);
+        taiLieuList.add(bao);
+        System.out.println("Thêm mới báo thành công!");
+    }
+
+    public static void thoatChucNangThemMoi(){
+        System.out.println("Thoát chức năng thêm mới tài liệu!");
+    }
+
+
+    // chức năng 2
+    public static void xoaTaiLieu() throws IOException {
+        System.out.println("---------------------------------------");
+        System.out.println("BẠN ĐÃ CHỌN XÓA TÀI LIỆU THEO MÃ TÀI LIỆU");
+        System.out.println("Nhập mã tài liệu muốn xóa:");
+        String maTL = bf.readLine();
+        for(int i=0;i<taiLieuList.size();i++){
+            if(taiLieuList.get(i).getMaTaiLieu().equals(maTL)){
+                taiLieuList.remove(i);
+                break;
+            }
+        }
+        System.out.println("XÓA THÀNH CÔNG!");
+        System.out.println(menu());
+        chonChucNang();
+    }
+    // chức năng 3
+    public static void hienThiThongTin(){
+        System.out.println("------------------------------------");
+        System.out.println("BẠN ĐÃ CHỌN CHỨC NĂNG HIỂN THỊ THÔNG TIN");
+        for(int i=0;i<taiLieuList.size();i++){
+            System.out.println(taiLieuList.get(i).toString());
+        }
+    }
+
+
+    // chức năng 4
+    public static void timKiemThongTin() throws IOException {
+        System.out.println("------------------------------------");
+        System.out.println("BẠN ĐÃ CHỌN CHỨC NĂNG TÌM KIẾM TÀI LIỆU THEO THỂ LOẠI.");
+        System.out.println(menuChucNang4());
+        System.out.println("Chọn chức năng:");
+        int cn = Integer.parseInt(bf.readLine());
+        while (cn>0 && cn<5){
+            switch (cn){
+                case 1:timKiemTheLoaiSach();
+                break;
+                case 2: timKiemTheLoaiTapChi();
+                break;
+                case 3:timKiemTheLoaiBao();
+                break;
+                case 4:thoatTimKiemTheoTheLoai();
+                break;
+            }
+            if(cn==4){
+                cn=5;
+            }
+            else{
+                System.out.println("Chọn chức năng:");
+                System.out.println(menuChucNang4());
+                cn = Integer.parseInt(bf.readLine());
+            }
+        }
+        System.out.println(menu());
+        chonChucNang();
+    }
+
+    public static void timKiemTheLoaiSach(){
+        System.out.println("-------------------------");
+        System.out.println("Bạn đã chọn tìm kiếm theo thể loại SÁCH");
+        System.out.println("Danh sách toàn bộ tài liệu thể loại SÁCH:");
+            for (int i = 0; i < taiLieuList.size(); i++) {
+                if (Sach.class.equals(taiLieuList.get(i).getClass())) {
+                    Sach sach = (Sach) taiLieuList.get(i);
+                    System.out.println(sach.toString());
+                }
+            }
+    }
+    public static void timKiemTheLoaiTapChi(){
+        System.out.println("-------------------------");
+        System.out.println("Bạn đã chọn tìm kiếm theo thể loại TẠP CHÍ");
+        System.out.println("Danh sách toàn bộ tài liệu thể loại TẠP CHÍ:");
+            for (int i = 0; i < taiLieuList.size(); i++) {
+                if(TapChi.class.equals(taiLieuList.get(i).getClass())){
+                    TapChi tapChi = (TapChi) taiLieuList.get(i);
+                    System.out.println(tapChi.toString());
+                }
+            }
+    }
+    public static void timKiemTheLoaiBao(){
+        System.out.println("-------------------------");
+        System.out.println("Bạn đã chọn tìm kiếm theo thể loại Bao");
+        System.out.println("Danh sách toàn bộ tài liệu thể loại Bao:");
+        for (int i = 0; i < taiLieuList.size(); i++) {
+            if(Bao.class.equals(taiLieuList.get(i).getClass())){
+                Bao bao = (Bao) taiLieuList.get(i);
+                System.out.println(bao.toString());
+            }
+        }
+    }
+
+    public static void thoatTimKiemTheoTheLoai(){
+        System.out.println("THOÁT TÌM KIẾM THEO THỂ LOẠI!");
+    }
+
+    // chức năng 5
+    public static void exit(){
+        System.out.println("THOÁT KHỎI CHƯƠNG TRÌNH....");
+    }
+
+    /*-------------------------- MENU --------------------------------*/
+
+    public static String menuChucNang1(){
+        String menu1="1.1: Thêm mới SÁCH."+"\n"+
+                     "1.2: Thêm mới TẠP CHÍ."+"\n"+
+                     "1.3: Thêm mới BÁO."+"\n"+
+                      "1.4: Thoát";
+        return menu1;
+    }
+
+
+    public static String menuChucNang3(){
+        String menu3="3.1: Hiển thị SÁCH."+"\n"+
+                "3.2: Hiển thị TẠP CHÍ."+"\n"+
+                "3.3: Hiển thị BÁO."+"\n"+
+                "3.4: Thoát.";
+        return menu3;
+    }
+
+    public static String menuChucNang4(){
+        String menu4="4.1: Tìm kiếm theo loại SÁCH."+"\n"+
+                    "4.2: Tìm kiếm theo loại TẠP CHÍ."+"\n"+
+                    "4.3: Tìm kiếm theo loại BÁO."+"\n"+
+                    "4.4: Thoát.";
+        return  menu4;
+    }
+}
+
+package qltv;
+
+public class TaiLieu {
+	private String maTaiLieu;
+
+    private String tenNhaXuatBan;
+
+
+    private int soBanPhatHanh;
+
+    public TaiLieu(){}
+
+
+    public TaiLieu(String maTaiLieu, String tenNhaXuatBan, int soBanPhatHanh) {
+        this.maTaiLieu = maTaiLieu;
+        this.tenNhaXuatBan = tenNhaXuatBan;
+        this.soBanPhatHanh = soBanPhatHanh;
+    }
+
+    public String getMaTaiLieu() {
+        return maTaiLieu;
+    }
+
+    public void setMaTaiLieu(String maTaiLieu) {
+        this.maTaiLieu = maTaiLieu;
+    }
+
+    public String getTenNhaXuatBan() {
+        return tenNhaXuatBan;
+    }
+
+    public void setTenNhaXuatBan(String tenNhaXuatBan) {
+        this.tenNhaXuatBan = tenNhaXuatBan;
+    }
+
+    public int getSoBanPhatHanh() {
+        return soBanPhatHanh;
+    }
+
+    public void setSoBanPhatHanh(int soBanPhatHanh) {
+        this.soBanPhatHanh = soBanPhatHanh;
+    }
+
+    @Override
+    public String toString() {
+        return "TaiLieu{" +
+                "maTaiLieu='" + maTaiLieu + '\n' +
+                ", tenNhaXuatBan='" + tenNhaXuatBan + '\n' +
+                ", soBanPhatHanh=" + soBanPhatHanh +
+                '}';
+    }
+
+}
+package qltv;
+
+public class TapChi extends  TaiLieu{
+
+    private int soPhatHanh;
+
+    private int thangPhatHanh;
+
+
+    public TapChi(){}
+
+    public TapChi(String maTaiLieu,String tenNhaXuatBan,int soBanPhatHanh,int soPhatHanh, int thangPhatHanh) {
+        super(maTaiLieu,tenNhaXuatBan,soBanPhatHanh);
+        this.soPhatHanh = soPhatHanh;
+        this.thangPhatHanh = thangPhatHanh;
+    }
+
+    public int getSoPhatHanh() {
+        return soPhatHanh;
+    }
+
+    public void setSoPhatHanh(int soPhatHanh) {
+        this.soPhatHanh = soPhatHanh;
+    }
+
+    public int getThangPhatHanh() {
+        return thangPhatHanh;
+    }
+
+    public void setThangPhatHanh(int thangPhatHanh) {
+        this.thangPhatHanh = thangPhatHanh;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+"\n"+ "TapChi{" +
+                "soPhatHanh=" + soPhatHanh +
+                ", thangPhatHanh=" + thangPhatHanh +
+                '}'+"\n"+"------------------------";
+    }
+
+}
+package qltv;
+
+public class Bao extends TaiLieu{
+
+
+    private int ngayPhatHanh;
+
+    public Bao(){}
+
+    public Bao(String maTaiLieu,String tenNhaXuatBan,int soBanPhatHanh,int ngayPhatHanh) {
+        super(maTaiLieu,tenNhaXuatBan,soBanPhatHanh);
+        this.ngayPhatHanh = ngayPhatHanh;
+    }
+
+    public int getNgayPhatHanh() {
+        return ngayPhatHanh;
+    }
+
+    public void setNgayPhatHanh(int ngayPhatHanh) {
+        this.ngayPhatHanh = ngayPhatHanh;
+    }
+
+
+    @Override
+    public String toString() {
+        return  super.toString()+"\n"+"Bao{" +
+                "ngayPhatHanh=" + ngayPhatHanh +
+                '}'+"\n"+"------------------------";
+    }
+
+}
+package qltv;
+
+public class Sach extends TaiLieu{
+
+
+	    private String tenTacGia;
+
+	    private int soTrang;
+
+	    public Sach(){}
+	    public Sach(String maTaiLieu,String tenNhaXuatBan,int soBanPhatHanh,String tenTacGia, int soTrang) {
+	        super(maTaiLieu,tenNhaXuatBan,soBanPhatHanh);
+	        this.tenTacGia = tenTacGia;
+	        this.soTrang = soTrang;
+	    }
+
+	    public String getTenTacGia() {
+	        return tenTacGia;
+	    }
+
+	    public void setTenTacGia(String tenTacGia) {
+	        this.tenTacGia = tenTacGia;
+	    }
+
+	    public int getSoTrang() {
+	        return soTrang;
+	    }
+
+	    public void setSoTrang(int soTrang) {
+	        this.soTrang = soTrang;
+	    }
+
+	    @Override
+	    public String toString() {
+	        return super.toString()+"\n"+ "Sach{" +
+	                "tenTacGia='" + tenTacGia + '\'' +
+	                ", soTrang=" + soTrang +
+	                '}'+"\n"+"------------------------";
+	    }
+
+
+}
+
+                                </textarea>
+                            </div>    
+                        </div>
+                    </div>
+                    <div id="middler--footer">                  
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div id="right--header">
+                    <h3>  <i class="fas fa-tags"></i>Mục lục bài tập</h3>
+                    <hr>
+                </div>
+                <div id="right--body">
+                    <div id="foulder">
+                        <i class="fas fa-folder-open"></i>
+                        <div class="weeken w1">Tuần 1</button></div>
+                        <div class="weeken w2">Tuần 2</button></div>
+                        <div class="weeken w3">Tuần 3</button></div>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="week week-one">
+                            <button class="button-baitap w1-tp1">Bài 1</button>
+                            <button class="button-baitap w1-tp2">Bài 2</button>
+                            <button class="button-baitap w1-tp3">Bài 3</button>
+                            <button class="button-baitap w1-tp4">Bài 4</button>
+                            <button class="button-baitap w1-tp5">Bài 5</button>
+                            <button class="button-baitap w1-tp6">Bài 6</button>
+                            <button class="button-baitap w1-tp7">Bài 7</button>
+                            <button class="button-baitap w1-tp8">Bài 8</button>
+                            <button class="button-baitap w1-tp9">Bài 9</button>
+                            <button class="button-baitap w1-tp10">Bài 10</button>
+                            <button class="button-baitap w1-tp11">Bài 11</button>
+                            <button class="button-baitap w1-tp12">Bài 12</button>
+                            <button class="button-baitap w1-tp13">Bài 13</button>
+                            <button class="button-baitap w1-tp14">Bài 14</button>
+                            <button class="button-baitap w1-tp15">Bài 15</button>
+                            <button class="button-baitap w1-tp16">Bài 16</button>
+                        </div>
+                        <div class="week week-two">
+                            <button class="button-baitap w2-tp1">Bài 1</button>
+                            <button class="button-baitap w2-tp2">Bài 2</button>
+                            <button class="button-baitap w2-tp3">Bài 3</button>
+                            <button class="button-baitap w2-tp4">Bài 4</button>
+                            <button class="button-baitap w2-tp5">Bài 5</button>
+                            <button class="button-baitap w2-tp6">Bài 6</button>
+                            <button class="button-baitap w2-tp7">Bài 7</button>
+                            <button class="button-baitap w2-tp8">Bài 8</button>
+                            <button class="button-baitap w2-tp9">Bài 9</button>
+                            <button class="button-baitap w2-tp10">Bài 10</button>
+                            <button class="button-baitap w2-tp11">Bài 11</button>
+                            <button class="button-baitap w2-tp12">Bài 12</button>
+                            <button class="button-baitap w2-tp13">Bài 13</button>
+                        </div>
+                        <div class="week week-three">
+                            <button class="button-baitap w3-tp1">Bài 1</button>
+                            <button class="button-baitap w3-tp2">Bài 2</button>
+                            <button class="button-baitap w3-tp3">Bài 3</button>
+                            <button class="button-baitap w3-tp4">Bài 4</button>
+                            <button class="button-baitap w3-tp5">Bài 5</button>
+                            <button class="button-baitap w3-tp6">Bài 6</button>
+                            <button class="button-baitap w3-tp7">Bài 7</button>
+                            <button class="button-baitap w3-tp8">Bài 8</button>
+                            <button class="button-baitap w3-tp9">Bài 9</button>
+                            <button class="button-baitap w3-tp10">Bài 10</button>
+                            <button class="button-baitap w3-tp11">Bài 11</button>
+                            <button class="button-baitap w3-tp12">Bài 12</button>
+                            <button class="button-baitap w3-tp13">Bài 13</button>
+                            <button class="button-baitap w3-tp14">Bài 14</button>
+                            <button class="button-baitap w3-tp15">Bài 15</button>
+                            <button class="button-baitap w3-tp16">Bài 16</button>
+                            <button class="button-baitap w3-tp17">Tự chọn</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="app--footer">
+
+        </div>
+    </div>
+    
+</body>
+<script src="js/main.js"></script>
+</html>
