@@ -2,17 +2,17 @@
     box-sizing: border-box;
 }
 html{
-font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 body{
     margin: 0;
     padding: 0;
 }
+
 #app{
-    display: flex;
+	display: flex;
     flex-direction: column;
     background-color:#fff;
-    
 }
 
 #app-header{
@@ -22,13 +22,13 @@ body{
     background-color: #f8c7a7;
     position: fixed;
     top: 0;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0;
 }
 
 
 #app--body{
-    display: flex;
+   display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
     margin-top: 120px;
@@ -49,31 +49,24 @@ body{
     padding-right: 10px;
     font-size: 30px;
 }
-
 #middler{
     width: 45%;
-    background-color: rgb(245, 208, 208);
+    background-color: rgb(255 219 217 / 85%);
     border: 1px solid black;
     border-radius: 4px;
     min-height: 400px;
 }
-.middlerBT{
-    display: none;
-}
+
 #right{
-    width: 30%;
+   width: 30%;
     background-color:#fff;
     padding-left: 20px;
     height: 300px;
     /* border: 1px solid black; */
 }
 
-.tips{
-    font-size: 18px;
-    text-align: center;
-    margin-top: 100px;
-}
-.middler--header{
+
+#middler--header{
     text-align: center;
 }
 #middler--body{
@@ -103,10 +96,17 @@ body{
 }
 
 .weeken:hover{
-    opacity: 0.7;
+     opacity: 0.7;
     cursor: pointer;
     background-color: rgb(250, 235, 220);
 }
+
+ /*.week{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+*/
 
 .button-baitap{
     height: 30px;
@@ -116,6 +116,7 @@ body{
     border: 1px solid black;
     border-radius: 4px;
     margin-top: 4px;
+    display: none;
 }
 
 .button-baitap:hover{
@@ -126,12 +127,9 @@ body{
     display: flex;
     flex-direction: column;
     padding: 20px 10px;
-    /* min-height: 400px; */
 }
-#debai{
-    /* padding: 0 16px; */
-}
-#code{
+
+#input{
     margin-bottom: 10px;
     resize: none;
     outline-style: none;
@@ -139,20 +137,21 @@ body{
 
 #output{
     resize: none;
-    outline-style: none; 
-    min-height: 400px;
+    outline-style: none;
 }
 #result{
+	left: 85%;
+    cursor: pointer;
     width: 100px;
-    background-color: #17a2b8;
+    background-color: #f68e48;
     height: 30px;
-    margin-top: 10px;
+    margin: 10px ;
     border-radius: 4px;
     border: 1px solid black;
     resize: none;
 }
 #result:hover{
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .active{
@@ -161,29 +160,83 @@ body{
 
 .avtive--baitap{
     background-color:#eeb9bd;
+    display: inline-block;
 }
 
-.week-one,
-.week-two,
-.week-three,
-.tuan1,
-.tuan2,
-.tuan3{
-    display: none;
-}
+/*.week-one{*/
+/*    display: none;*/
+/*}*/
 
+
+/*.week-two{*/
+/*    display: none;*/
+/*}*/
+
+/*.week-three{*/
+/*    display: none;*/
+/*}*/
 
 .active--week{
     display: block;
 }
-.close{
-    display: none;
-}
+
 #code{
-    height: 100px;
-    width: 100%;
+    height: 500px;
+    width: 95%;
     background-color: white;
     margin-bottom: 20px;
     border: 1px solid black;
-    display: none;
+    overflow: scroll;
+    resize: none;
+    outline-style: none;
+    margin-top: 20px;
+}
+
+
+#left--body{
+    border: 1px solid black;
+    padding:10px 0px 10px 10px;
+    margin-right: 30px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.active-topic-week-main{
+    background-color: #f89a5b ;
+}
+
+.active-topic-class{
+    background-color: #eeb9bd;
+}
+#inputText{
+    resize: none;
+    outline: none;
+    width: 100%;
+    height: 100px;
+}
+#outputText{
+    outline: none;
+    width: 100%;
+    height: 200px;
+}
+.active-topic-week-main{
+    background-color:#f89a5b;
+}
+
+.active-topic-class{
+    background-color:#f89a5b ;
+}
+#middler--footer{
+	display: flex;
+    justify-content: center
+}
+#debai{
+	font-style: italic;
+    font-weight: 500;
+	
+}
+.btn{
+	width: 20%;
+    background-color: #fdd28acc;
+    height: 20px;
 }
